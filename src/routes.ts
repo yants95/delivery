@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { AuthenticateClientController } from './modules/account/authenticate-user'
+import { AuthenticateClientController } from './modules/account/authenticate-client'
 import { CreateClientController } from './modules/clients/usecases'
 import { CreateDeliverymanController } from './modules/deliveryman/usecases'
 
