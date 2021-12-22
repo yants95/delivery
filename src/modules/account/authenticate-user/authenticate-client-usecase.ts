@@ -5,7 +5,7 @@ import { compare } from 'bcrypt'
 import { sign } from 'jsonwebtoken'
 
 export class AuthenticateClientUsecase {
-  async execute ({ username, password }: AuthenticateClient): Promise<any> {
+  async execute ({ username, password }: AuthenticateClient): Promise<string> {
     const client = await prisma.clients.findFirst({
       where: {
         username
