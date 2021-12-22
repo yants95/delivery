@@ -1,6 +1,6 @@
-import { CreateClientDTO } from "../dtos";
+import { CreateClientDTO } from "./dtos";
 
-import { prisma } from '../../../database/prisma-client'
+import { prisma } from '../../../../database/prisma-client'
 import { hash } from 'bcrypt'
 
 export class CreateClientsUsecase {
