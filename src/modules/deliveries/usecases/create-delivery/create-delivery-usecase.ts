@@ -1,6 +1,6 @@
-import { CreateDelivery } from '../dtos';
+import { CreateDelivery } from './dtos';
 
-import { prisma } from '../../../database/prisma-client';
+import { prisma } from '../../../../database/prisma-client';
 
 export class CreateDeliveryUsecase {
   async execute({ item_name, client_id }: CreateDelivery) {
