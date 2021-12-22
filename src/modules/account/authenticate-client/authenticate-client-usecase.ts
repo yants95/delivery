@@ -14,7 +14,7 @@ export class AuthenticateClientUsecase {
     if (!client) throw new Error('Username/password incorrect.')
     const passwordMatch = await compare(password, client.password)
     if (!passwordMatch) throw new Error('Username/password incorrect.')
-    const token = sign({ username }, String(process.env.JWT_SECRET), {
+    const token = sign({ username }, String(process.env.JWT_SECRET_CLIENT), {
       subject: client.id,
       expiresIn: process.env.JWT_EXPIRES_IN
     })
