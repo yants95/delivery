@@ -1,24 +1,9 @@
 {
-  "compilerOptios": {
+  "compilerOptions": {
     "sourceMap": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "target": "es2021",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "resolveJsonModule": true,
     "outDir": "dist",
     "strict": true,
     "lib": ["esnext"],
-    "esModuleInterop": true,
-    "rootDirs": ["src", "tests"],
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"],
-      "@/tests/*": ["../tests/*"]
-    },
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-  },
-  "include": ["src", "tests"]
+    "esModuleInterop": true
+  }
 }
