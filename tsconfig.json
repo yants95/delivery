@@ -1,9 +1,19 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
     "outDir": "dist",
+    "rootDirs": ["src"],
+    "target": "es2021",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+    },
     "strict": true,
-    "lib": ["esnext"],
-    "esModuleInterop": true
   }
 }

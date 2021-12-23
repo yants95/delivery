@@ -1,15 +1,15 @@
-import { Request, Response } from "express";
+import { AuthenticateDeliverymanUsecase } from '@/modules/account/authenticate-deliveryman'
 
-import { AuthenticateDeliverymanUsecase } from "./authenticate-deliveryman-usecase";
+import { Request, Response } from 'express'
 
 export class AuthenticateDeliverymanController {
- async handle (req: Request, res: Response) {
-  try {
-    const authenticateDeliverymanUsecase = new AuthenticateDeliverymanUsecase()
-    const token = await authenticateDeliverymanUsecase.execute(req.body)
-    res.json(token)
-  } catch (error) {
-    res.status(500).json({ message: error })
+  async handle (req: Request, res: Response): Promise<void> {
+    try {
+      const authenticateDeliverymanUsecase = new AuthenticateDeliverymanUsecase()
+      const token = await authenticateDeliverymanUsecase.execute(req.body)
+      res.json(token)
+    } catch (error) {
+      res.status(500).json({ message: error })
+    }
   }
- } 
 }

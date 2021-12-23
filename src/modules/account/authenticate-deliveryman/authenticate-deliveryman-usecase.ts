@@ -1,6 +1,6 @@
-import { AuthenticateDeliveryman } from '../dtos';
+import { AuthenticateDeliveryman } from '@/modules/account/dtos'
+import { prisma } from '@/database'
 
-import { prisma } from '../../../database/prisma-client';
 import { compare } from 'bcrypt'
 import { sign } from 'jsonwebtoken'
 

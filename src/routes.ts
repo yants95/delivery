@@ -1,12 +1,12 @@
 import { Router } from 'express'
-import { ensureAuthenticateClient, ensureAuthenticateDeliveryman } from './middlewares'
+import { ensureAuthenticateClient, ensureAuthenticateDeliveryman } from '@/middlewares'
 
-import { AuthenticateClientController } from './modules/account/authenticate-client'
-import { AuthenticateDeliverymanController } from './modules/account/authenticate-deliveryman'
-import { FindAllDeliveriesController, CreateClientController } from './modules/clients'
-import { CreateDeliveryController, FindAllAvailableController, UpdateDeliverymanController } from './modules/deliveries/usecases'
-import { UpdateDeliveryController } from './modules/deliveries/usecases/update-delivery'
-import { CreateDeliverymanController } from './modules/deliveryman/usecases'
+import { AuthenticateClientController } from '@/modules/account/authenticate-client'
+import { AuthenticateDeliverymanController } from '@/modules/account/authenticate-deliveryman'
+import { FindAllDeliveriesController, CreateClientController } from '@/modules/clients'
+import { CreateDeliveryController, FindAllAvailableController, UpdateDeliverymanController } from '@/modules/deliveries/usecases'
+import { UpdateDeliveryController } from '@/modules/deliveries/usecases/update-delivery'
+import { CreateDeliverymanController } from '@/modules/deliveryman/usecases'
 
 export const routes = Router()
 

@@ -1,17 +1,16 @@
-import { CreateClientDTO } from "./dtos";
+import { CreateClientDTO } from '@/modules/clients/usecases/create-client/dtos'
+import { prisma } from '@/database'
 
-import { prisma } from '../../../../database/prisma-client'
 import { hash } from 'bcrypt'
-
 export class CreateClientsUsecase {
-  async execute ({ username, password }: CreateClientDTO) {
+  async execute ({ username, password }: CreateClientDTO): Promise<void> {
     const client = await prisma.clients.findFirst({
-      where: { 
+      where: {
         username: {
           equals: username,
           mode: 'insensitive'
         }
-      } 
+      }
     })
     if (client) throw new Error('Client already exists.')
     const hashedPassword = await hash(password, 10)

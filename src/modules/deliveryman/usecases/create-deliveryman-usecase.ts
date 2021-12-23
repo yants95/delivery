@@ -1,10 +1,10 @@
-import { CreateDeliveryman } from "../dtos";
+import { CreateDeliveryman } from '@/modules/deliveryman/dtos'
+import { prisma } from '@/database'
 
-import { prisma } from '../../../database/prisma-client'
 import { hash } from 'bcrypt'
 
 export class CreateDeliverymanUsecase {
-  async execute ({ username, password }: CreateDeliveryman) {
+  async execute ({ username, password }: CreateDeliveryman): Promise<void> {
     const deliveryman = await prisma.deliveryman.findFirst({
       where: {
         username: {
